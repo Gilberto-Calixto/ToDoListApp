@@ -2,12 +2,17 @@ package com.corevm.todolistapp.ui
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.corevm.todolistapp.R
+import com.corevm.todolistapp.viewmodel.TaskViewModel
 
 class MainActivity : AppCompatActivity() {
+
+    private val viewModel: TaskViewModel by viewModels()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
